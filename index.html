@@ -9,15 +9,96 @@
 		/>
 		<meta name="keywords" content="expense, tracker, js, budget, simple" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Expense Tracker</title>
+		<title>BudgetSmart</title>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
 		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="lib/css/style.min.css" />
 	</head>
 	<body>
+		<header>
+			<nav class="nav-wrapper purple lighten-2">
+				<div class="container">
+					<a href="#" class="brand-logo center">BudgetSmart</a>
+				</div>
+			</nav>
+		</header>
+		<br />
+
+		<main class="container">
+			<section class="card">
+				<div class="card-content card-panel deep-purple white-text">
+					<span class="card-title"><h3>Add A New Expense</h3></span>
+					<form class="row">
+						<div class="input-field col s8">
+							<input
+								type="text"
+								name="expense-name"
+								placeholder="E.g. Bought food"
+								id="expense-name"
+								class="validate"
+							/>
+							<label for="expense-name">Expense Name</label>
+						</div>
+						<div class="input-field col s4">
+							<input
+								type="number"
+								name="expense-cost"
+								placeholder="E.g. Rs. 100"
+								id="expense-cost"
+								class="validate"
+							/>
+							<label for="expense-cost">Expense Cost</label>
+						</div>
+						<button class="add-btn btn blue darken-3">
+							<i class="material-icons left">add</i>
+							Add Expense
+						</button>
+						<button class="update-btn btn orange darken-2">
+							<i class="material-icons left">mode_edit</i>
+							Update Expense
+						</button>
+						<button class="back-btn btn grey darken-1">
+							<i class="material-icons left">chevron_left</i>
+							Back
+						</button>
+					</form>
+				</div>
+			</section>
+			<section class="card">
+				<div class="card-content card-panel deep-orange darken-1">
+					<h4 class="center white-text">
+						Total Expense:<br />
+						Rs. <span class="total-expense">0</span>
+					</h4>
+				</div>
+			</section>
+			<section class="card">
+				<div class="card-content card-panel green lighten-1 white-text">
+					<span class="card-title"><h4>Your Expenses</h4></span>
+					<ul class="collection black-text" id="expense-list"></ul>
+					<div class="row">
+						<button
+							class="btn-large clear-btn btn purple darken-2 col s6 m4 offset-m4 offset-s3"
+						>
+							Clear All
+						</button>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="page-footer center">
+			<h6>Copyright &copy; 2020</h6>
+			<h6>Made with 🤍 by Andrew</h6>
+		</footer>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<script src="lib/js/app.js"></script>
+		<script src="lib/js/app.min.js"></script>
 	</body>
 </html>
